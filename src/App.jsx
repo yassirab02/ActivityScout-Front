@@ -8,9 +8,9 @@ function App() {
     <>
     <Navbar/>
     {/* <LoginNav/> */}
-    <div className='bg-gray-500 pt-20'>
+    <div className='pt-20'>
     <SearchBar/>
-    <Login/>    
+    {/* <Login/>     */}
     </div>
     </>
   )

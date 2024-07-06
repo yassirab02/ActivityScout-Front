@@ -1,5 +1,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import logo from '../assets/logo.png'
 
 const user = {
   name: 'Tom Cook',
@@ -42,9 +43,9 @@ export default function Example() {
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <img
-                    alt="Your Company"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    className="h-8 w-8"
+                    alt="logo"
+                    src={logo}
+                    className="h-20 w-20"
                   />
                 </div>
                 <div className="hidden md:block">
@@ -165,15 +166,6 @@ export default function Example() {
             </div>
           </DisclosurePanel>
         </Disclosure>
-
-        <header className="bg-white shadow">
-          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
-          </div>
-        </header>
-        <main>
-          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">{/* Your content */}</div>
-        </main>
       </div>
     </>
   )
