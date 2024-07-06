@@ -69,7 +69,7 @@ const SearchBar = ({ onSearch }) => {
 
   return (
     <div className="relative w-full max-w-3xl mx-auto mt-10">
-      <h1 className='text-6xl mb-16 flex justify-center items-center font-[Poppins]'>{title}</h1>
+      <h1 className='text-6xl mb-16 flex justify-center items-center font-[Poppins] font-bold'>{title}</h1>
       <div className='flex justify-center gap-24 mb-5 text-xl font-[Poppins]'>
         <button
           className={`flex items-center space-x-2 ${selectedOption === 'All' ? 'border-b-2 border-blue-600' : 'hover:underline'}`}
@@ -104,7 +104,7 @@ const SearchBar = ({ onSearch }) => {
           onChange={handleSearchChange}
         />
         <button
-          className="flex-shrink-0 bg-blue-600 hover:bg-blue-300 border-blue-600 hover:border-blue-300 text-sm border-4 text-white py-2 px-4 rounded-3xl ml-2 shadow-md"
+          className="flex-shrink-0 bg-blue-600 hover:bg-blue-400 border-blue-600 hover:border-blue-400 text-sm border-4 text-white py-2 px-4 rounded-full ml-2 shadow-md"
           type="submit"
         >
           Search
