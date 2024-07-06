@@ -22,14 +22,6 @@ const Navbar = () => {
           ActivityScout
         </div>
 
-        <div className='hidden md:flex flex-grow justify-center mx-8'>
-          <input
-            type='text'
-            placeholder='Search...'
-            className='w-full max-w-md px-4 py-2 border border-gray-500 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500'
-          />
-        </div>
-
         <div onClick={() => setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
           <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
         </div>
