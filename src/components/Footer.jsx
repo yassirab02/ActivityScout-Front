@@ -1,10 +1,8 @@
 import React from 'react';
 import logo from '../assets/logo.png'; // Replace with your actual logo file path
 import {
-    FaWhatsapp,
     FaInstagram,
-    FaLocationArrow,
-    FaPhone,
+    FaFacebook,
   } from "react-icons/fa";
 
 const Footer = () => {
@@ -27,9 +25,12 @@ const Footer = () => {
         </div>
         <div className="flex items-center justify-between mt-4 text-sm">
           <div>&copy; {new Date().getFullYear()} Your Company. All rights reserved.</div>
-          <div>
+          <div className='flex gap-4'>
             <a href="https://www.instagram.com/yourcompany" target="_blank" rel="noopener noreferrer">
             <FaInstagram className="text-xl" />
+            </a>
+            <a href="https://www.instagram.com/yourcompany" target="_blank" rel="noopener noreferrer">
+            <FaFacebook className="text-xl" />
             </a>
           </div>
         </div>
