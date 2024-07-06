@@ -1,11 +1,15 @@
-import { useState } from 'react'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Navbar from './components/Navbar';
+import Login from './pages/Login';
+import LoginNav from './components/LoginNav';
 
 function App() {
   return (
     <>
-    <h1 className='font-serif text-xl text-red-800 bg-green-700'>Hello</h1>
+    <div className='bg-gray-500 w-full h-screen'>
+    {/* <LoginNav/> */}
+    <Navbar/>
+    <Login/>    
+    </div>
     </>
   )
 }
