@@ -72,21 +72,21 @@ const SearchBar = ({ onSearch }) => {
       <h1 className='text-6xl mb-16 flex justify-center items-center font-[Poppins] font-bold'>{title}</h1>
       <div className='flex justify-center gap-24 mb-5 text-xl font-[Poppins]'>
         <button
-          className={`flex items-center space-x-2 ${selectedOption === 'All' ? 'border-b-2 border-blue-600' : 'hover:border-b-2 hover:border-blue-600'}`}
+          className={`flex items-center space-x-2 font-semibold ${selectedOption === 'All' ? 'border-b-2 border-blue-600' : 'hover:border-b-2 hover:border-blue-600 hover:opacity-80'}`}
           onClick={() => handleOptionClick('All')}
         >
           <img src={search} alt="All" className="w-8 h-8 " />
           <span>All</span>
         </button>
         <button
-          className={`flex items-center space-x-2 ${selectedOption === 'Country' ? 'border-b-2 border-blue-600' : 'hover:border-b-2 hover:border-blue-600'}`}
+          className={`flex items-center space-x-2 font-semibold ${selectedOption === 'Country' ? 'border-b-2 border-blue-600' : 'hover:border-b-2 hover:border-blue-600 hover:opacity-80'}`}
           onClick={() => handleOptionClick('Country')}
         >
           <img src={countries} alt="Countries" className="w-8 h-8 " />
           <span>Country</span>
         </button>
         <button
-          className={`flex items-center space-x-2 ${selectedOption === 'City' ? 'border-b-2 border-blue-600' : 'hover:border-b-2 hover:border-blue-600'}`}
+          className={`flex items-center space-x-2 font-semibold ${selectedOption === 'City' ? 'border-b-2 border-blue-600' : 'hover:border-b-2 hover:border-blue-600 hover:opacity-80'}`}
           onClick={() => handleOptionClick('City')}
         >
           <img src={location} alt="Location" className="w-8 h-8 " />
@@ -94,7 +94,7 @@ const SearchBar = ({ onSearch }) => {
         </button>
 
       </div>
-      <form onSubmit={handleSearchSubmit} className="flex items-center bg-white rounded-full border border-gray-500 py-2 px-3 shadow-lg focus-within:ring-indigo-500 focus-within:ring-2 relative">
+      <form onSubmit={handleSearchSubmit} className="flex items-center bg-white rounded-full border border-gray-200 py-2 px-3 shadow-lg focus-within:ring-indigo-500 focus-within:ring-2 relative">
         <ion-icon name="location" class="absolute left-4 text-3xl text-gray-400"></ion-icon>
         <input
           className="appearance-none bg-transparent w-full text-gray-700 mr-3 py-1 px-2 pl-12 leading-tight focus:outline-none text-lg"
