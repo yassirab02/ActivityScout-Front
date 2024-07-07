@@ -72,21 +72,21 @@ const SearchBar = ({ onSearch }) => {
       <h1 className='text-6xl mb-16 flex justify-center items-center font-[Poppins] font-bold'>{title}</h1>
       <div className='flex justify-center gap-24 mb-5 text-xl font-[Poppins]'>
         <button
-          className={`flex items-center space-x-2 ${selectedOption === 'All' ? 'border-b-2 border-blue-600' : 'hover:underline'}`}
+          className={`flex items-center space-x-2 ${selectedOption === 'All' ? 'border-b-2 border-blue-600' : 'hover:border-b-2 hover:border-blue-600'}`}
           onClick={() => handleOptionClick('All')}
         >
           <img src={search} alt="All" className="w-8 h-8 " />
           <span>All</span>
         </button>
         <button
-          className={`flex items-center space-x-2 ${selectedOption === 'Country' ? 'border-b-2 border-blue-600' : 'hover:underline'}`}
+          className={`flex items-center space-x-2 ${selectedOption === 'Country' ? 'border-b-2 border-blue-600' : 'hover:border-b-2 hover:border-blue-600'}`}
           onClick={() => handleOptionClick('Country')}
         >
           <img src={countries} alt="Countries" className="w-8 h-8 " />
           <span>Country</span>
         </button>
         <button
-          className={`flex items-center space-x-2 ${selectedOption === 'City' ? 'border-b-2 border-blue-600' : 'hover:underline'}`}
+          className={`flex items-center space-x-2 ${selectedOption === 'City' ? 'border-b-2 border-blue-600' : 'hover:border-b-2 hover:border-blue-600'}`}
           onClick={() => handleOptionClick('City')}
         >
           <img src={location} alt="Location" className="w-8 h-8 " />
