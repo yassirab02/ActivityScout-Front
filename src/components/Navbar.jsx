@@ -41,14 +41,14 @@ const Navbar = () => {
       </div>
 
       {/* Search bar for small screens */}
-      <div className={`md:hidden px-7 pb-4 transition-all duration-500 ease-in ${open ? 'block' : 'hidden'}`}>
+      {/* <div className={`md:hidden px-7 pb-4 transition-all duration-500 ease-in ${open ? 'block' : 'hidden'}`}>
         <input
           type='text'
           placeholder='Search...'
-          className='w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500'
+          className='w-full px-4  border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500'
         />
-      </div>
-    </div>
+      </div> */}
+    </div>  
   );
 }
 
