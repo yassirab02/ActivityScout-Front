@@ -31,7 +31,7 @@ const Suggestions = () => {
     },
     {
       title: 'Rabat',
-      description: 'The capital of morroco',
+      description: 'The capital of Morocco',
       image: rabat,
     },
   ];
@@ -67,7 +67,7 @@ const Suggestions = () => {
             onClick={scrollLeft}
             className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:shadow-lg transition-shadow duration-300 z-10"
           >
-            <IonIcon icon={arrowBackCircleOutline} className="text-4xl text-gray-800" />
+            <IonIcon icon={arrowBackCircleOutline} className="text-2xl text-gray-800" />
           </button>
         )}
         <div
@@ -89,7 +89,7 @@ const Suggestions = () => {
                 />
               </div>
               <button
-                className={`absolute top-2 right-2 text-white text-2xl bg-gray-800 rounded-full p-1 opacity-0 transition-opacity duration-300 ${hovering ? 'hover:opacity-100' : ''}`}
+                className="absolute top-2 right-2 text-white text-lg hover:text-xl hover:text-blue-700 bg-gray-400  rounded-full p-1"
               >
                 <IonIcon icon={bookmarkOutline} />
               </button>
@@ -105,7 +105,7 @@ const Suggestions = () => {
             onClick={scrollRight}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:shadow-lg transition-shadow duration-300"
           >
-            <IonIcon icon={arrowForwardCircleOutline} className="text-4xl text-gray-800" />
+            <IonIcon icon={arrowForwardCircleOutline} className="text-2xl text-gray-800" />
           </button>
         )}
       </div>
