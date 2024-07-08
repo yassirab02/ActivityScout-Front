@@ -67,7 +67,7 @@ const Suggestions = () => {
             onClick={scrollLeft}
             className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:shadow-lg transition-shadow duration-300 z-10"
           >
-            <IonIcon icon={arrowBackCircleOutline} className="text-2xl text-gray-800" />
+            <IonIcon icon={arrowBackCircleOutline} className="text-2xl text-black" />
           </button>
         )}
         <div
@@ -105,7 +105,7 @@ const Suggestions = () => {
             onClick={scrollRight}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:shadow-lg transition-shadow duration-300"
           >
-            <IonIcon icon={arrowForwardCircleOutline} className="text-2xl text-gray-800" />
+            <IonIcon icon={arrowForwardCircleOutline} className="text-2xl text-black" />
           </button>
         )}
       </div>
