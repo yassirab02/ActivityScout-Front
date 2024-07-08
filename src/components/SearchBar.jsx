@@ -94,7 +94,7 @@ const SearchBar = ({ onSearch }) => {
         </button>
 
       </div>
-      <form onSubmit={handleSearchSubmit} className="flex items-center bg-white rounded-full border border-gray-200 py-2 px-3 shadow-lg focus-within:ring-indigo-500 focus-within:ring-2 relative">
+      <form onSubmit={handleSearchSubmit} className="flex items-center bg-white rounded-full border border-gray-300 py-2 px-3 shadow-xl focus-within:ring-indigo-500 focus-within:ring-2 relative">
         <ion-icon name="location-outline" class="absolute left-4 text-3xl text-gray-800"></ion-icon>
         <input
           className="appearance-none bg-transparent w-full text-black mr-3 py-1 px-2 pl-12 leading-tight focus:outline-none text-lg"

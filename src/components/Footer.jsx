@@ -24,7 +24,7 @@ const Footer = () => {
           </nav>
         </div>
         <div className="flex items-center justify-between mt-4 text-sm">
-          <div>&copy; {new Date().getFullYear()} Your Company. All rights reserved.</div>
+          <div>&copy; {new Date().getFullYear()} Activity Scout. All rights reserved.</div>
           <div className='flex gap-4'>
             <a href="https://www.instagram.com/yourcompany" target="_blank" rel="noopener noreferrer">
             <FaInstagram className="text-xl" />
