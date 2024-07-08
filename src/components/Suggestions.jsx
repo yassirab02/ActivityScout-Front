@@ -5,6 +5,7 @@ import kech from '../assets/kech.jpg';
 import tanger from '../assets/tanger.jpg';
 import azzemour from '../assets/azzemour.jpg';
 import taghazout from '../assets/taghazout.jpg';
+import rabat from '../assets/rabat.jpg';
 
 const Suggestions = () => {
   const suggestionsData = [
@@ -28,6 +29,11 @@ const Suggestions = () => {
       description: 'Amazing place',
       image: taghazout,
     },
+    {
+      title: 'Rabat',
+      description: 'The capital of morroco',
+      image: rabat,
+    },
   ];
 
   const scrollRef = useRef(null);
@@ -48,7 +54,7 @@ const Suggestions = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-4xl">
+    <div className="container mx-auto px-4 py-8 max-w-full md:max-w-6xl">
       <h2 className="text-2xl font-bold mb-6">Suggestions for You</h2>
       <div
         className="relative flex items-center overflow-x-auto"
@@ -66,14 +72,14 @@ const Suggestions = () => {
         )}
         <div
           ref={scrollRef}
-          className="flex space-x-4 pb-4" // Add padding bottom to ensure the full card is visible
+          className="flex space-x-4 pb-4"
           style={{ overflowX: 'auto', scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {suggestionsData.map((suggestion, index) => (
             <div
               key={index}
               className="relative bg-transparent shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 w-64 cursor-pointer"
-              style={{ minWidth: '300px', maxWidth: '300px', height: 'fit-content' }}
+              style={{ minWidth: '280px', maxWidth: '280px', height: 'fit-content' }}
             >
               <div className="h-48 overflow-hidden">
                 <img
