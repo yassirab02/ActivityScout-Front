@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { IonIcon } from '@ionic/react';
-import { arrowForwardCircleOutline, arrowBackCircleOutline, bookmarkOutline } from 'ionicons/icons';
+import { arrowForwardOutline, arrowBackOutline, heartOutline, heart } from 'ionicons/icons';
 import kech from '../assets/kech.jpg';
 import tanger from '../assets/tanger.jpg';
 import azzemour from '../assets/azzemour.jpg';
@@ -38,6 +38,8 @@ const Suggestions = () => {
 
   const scrollRef = useRef(null);
   const [hovering, setHovering] = useState(false);
+  const [hoveredHeartmark, setHoveredHeartmark] = useState(null);
+  const [favorites, setFavorites] = useState([]);
 
   const scrollRight = () => {
     scrollRef.current.scrollBy({
@@ -53,9 +55,17 @@ const Suggestions = () => {
     });
   };
 
+  const toggleFavorite = (index) => {
+    setFavorites((prevFavorites) =>
+      prevFavorites.includes(index)
+        ? prevFavorites.filter((fav) => fav !== index)
+        : [...prevFavorites, index]
+    );
+  };
+
   return (
     <div className="container mx-auto px-4 py-8 max-w-full md:max-w-6xl">
-      <h2 className="text-2xl font-bold mb-6">Suggestions for You</h2>
+      <h2 className="text-2xl font-semibold mb-6">Suggestions for You</h2>
       <div
         className="relative flex items-center overflow-x-auto"
         onMouseEnter={() => setHovering(true)}
@@ -65,9 +75,9 @@ const Suggestions = () => {
         {hovering && (
           <button
             onClick={scrollLeft}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:shadow-lg transition-shadow duration-300 z-10"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white border border-black rounded-full p-2 z-10 h-10"
           >
-            <IonIcon icon={arrowBackCircleOutline} className="text-2xl text-black" />
+            <IonIcon icon={arrowBackOutline} className="text-2xl text-black" />
           </button>
         )}
         <div
@@ -89,9 +99,18 @@ const Suggestions = () => {
                 />
               </div>
               <button
-                className="absolute top-2 right-2 text-white text-lg hover:text-xl hover:text-blue-700 bg-gray-400  rounded-full p-1"
+                onClick={() => toggleFavorite(index)}
+                onMouseEnter={() => setHoveredBookmark(index)}
+                onMouseLeave={() => setHoveredBookmark(null)}
+                className="absolute top-2 right-2 text-blue-700 text-lg hover:text-xl hover:text-blue-700 bg-white rounded-full p-1 w-8 h-8"
+                style={{ zIndex: 20 }}
               >
-                <IonIcon icon={bookmarkOutline} />
+                <IonIcon icon={favorites.includes(index) ? heart : heartOutline} className="font-bold" />
+                {hoveredHeartmark === index && !favorites.includes(index) && (
+                  <div className="absolute top-full right-0 mt-1 bg-white text-blue-700 font-semibold text-xs rounded py-1 px-2 z-30">
+                    Add to Favorite
+                  </div>
+                )}
               </button>
               <div className="p-4">
                 <h3 className="text-xl font-semibold mb-2">{suggestion.title}</h3>
@@ -103,9 +122,9 @@ const Suggestions = () => {
         {hovering && (
           <button
             onClick={scrollRight}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:shadow-lg transition-shadow duration-300"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white border border-black rounded-full p-2 h-10"
           >
-            <IonIcon icon={arrowForwardCircleOutline} className="text-2xl text-black" />
+            <IonIcon icon={arrowForwardOutline} className="text-2xl text-black" />
           </button>
         )}
       </div>
