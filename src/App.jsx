@@ -5,7 +5,7 @@ import SearchBar from './components/SearchBar';
 import Footer from './components/Footer';
 import Suggestions from './components/Suggestions';
 import TrendingPlaces from './components/TrendingPlaces';
-import ActivityTypes from './components/ActivityTypes';
+import Filter from './components/Filter';
 import Carousel from './components/Carousel';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
     <Navbar/>
     {/* <LoginNav/> */}
     <div className='pt-20'>
-      <ActivityTypes/>
+    <Filter/>
     <SearchBar/>
     <Suggestions/>
     <TrendingPlaces/>
