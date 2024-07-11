@@ -1,6 +1,6 @@
 import React from "react";
 
-const ActivityTypes = () => {
+const Filter = () => {
   return (
     <>
       <div className="flex flex-col items-center mt-5">
@@ -36,4 +36,4 @@ const ActivityTypes = () => {
   );
 };
 
-export default ActivityTypes;
+export default Filter;
