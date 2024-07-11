@@ -100,8 +100,8 @@ const Suggestions = () => {
               </div>
               <button
                 onClick={() => toggleFavorite(index)}
-                onMouseEnter={() => setHoveredBookmark(index)}
-                onMouseLeave={() => setHoveredBookmark(null)}
+                onMouseEnter={() => setHoveredHeartmark(index)}
+                onMouseLeave={() => setHoveredHeartmark(null)}
                 className="absolute top-2 right-2 text-blue-700 text-lg hover:text-xl hover:text-blue-700 bg-white rounded-full p-1 w-8 h-8"
                 style={{ zIndex: 20 }}
               >
