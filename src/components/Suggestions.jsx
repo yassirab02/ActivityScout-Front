@@ -64,7 +64,7 @@ const Suggestions = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-full md:max-w-6xl">
+    <div className="container mx-auto px-4 py-8 max-w-full md:max-w-6xl dark:text-white">
       <h2 className="text-2xl font-semibold mb-6">Suggestions for You</h2>
       <div
         className="relative flex items-center overflow-x-auto"
