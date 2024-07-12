@@ -5,7 +5,7 @@ import Title from "./Title";
 const Carousel = () => {
   return (
     <>
-    <Title/>
+    <Title title="Marrakesh"/>
    
     </>
   );
