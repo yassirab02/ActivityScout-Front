@@ -29,7 +29,6 @@ const Home = () => {
         <Rating />
         <ConfirmMsg />
         <Comment />
-        <AddActivity/>
         {/* <Login/>     */}
         <Footer />
       </div>

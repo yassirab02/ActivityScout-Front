@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Activities from "./components/Activities";
 import Layout from "./components/Layout";
+import AddActivity from "./components/AddActivity";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Activities />,
+      },
+      {
+        path: "/add",
+        element: <AddActivity />,
       },
     ],
     
