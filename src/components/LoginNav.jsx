@@ -57,9 +57,6 @@ export default function Example() {
                 </div>
               </div>
 
-              {/* Space filler to push items to the right */}
-              <div className="flex-grow"></div>
-
               <div className="flex items-center space-x-4">
                 {/* Notifications button */}
                 <button

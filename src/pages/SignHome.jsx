@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import LoginNav from "../components/LoginNav";
 import SearchBar from "../components/SearchBar";
 import Footer from "../components/Footer";
 import TrendingPlaces from "../components/TrendingPlaces";
@@ -10,17 +10,13 @@ import ConfirmMsg from "../components/comment/ConfirmMsg";
 import Suggestions from "../components/Suggestions";
 import Activities from "../components/Activities";
 import AddComment from "../components/comment/AddComment";
-import AddActivity from "../components/AddActivity";
 import Carousel from "../components/Carousel";
-// import Login from "./pages/Login";
 
-const Home = () => {
+const SignHome = () => {
   return (
     <>
-      <Navbar />
-      {/* <LoginNav/> */}
+      <LoginNav/>
       <div className="pt-20">
-        {/* <LandingPage /> */}
         <SearchBar />
         <Suggestions />
         <Filter />
@@ -37,4 +33,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default SignHome;

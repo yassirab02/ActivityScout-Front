@@ -35,7 +35,9 @@ const Navbar = () => {
             ))
           }
           <Button>
+            <a href="/sign-up">
             Sign Up
+            </a>
           </Button>
         </ul>
       </div>

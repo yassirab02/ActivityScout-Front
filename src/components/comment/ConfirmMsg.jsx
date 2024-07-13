@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const ConfirmMsg = () => {
+const ConfirmMsg = ({message}) => {
 
     return (
         <>
@@ -20,7 +20,7 @@ const ConfirmMsg = () => {
               clipRule="evenodd"
             />
           </svg>
-          <h3 className="font-semibold">Comment added successfully!</h3>
+          <h3 className="font-semibold">{message}</h3>
         </div>
         <p className="ml-8">
           Thank you for your contributing.

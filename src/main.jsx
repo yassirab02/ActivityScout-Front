@@ -12,6 +12,9 @@ import Navbar from "./components/Navbar";
 import Activities from "./components/Activities";
 import Layout from "./components/Layout";
 import AddActivity from "./components/AddActivity";
+import SignIn from "./pages/SignIn";
+import About from "./components/About";
+import SignHome from "./pages/SignHome";
 
 const router = createBrowserRouter([
   {
@@ -26,8 +29,20 @@ const router = createBrowserRouter([
         path: "/add",
         element: <AddActivity />,
       },
+      {
+        path: "/about",
+        element: <About />,
+      },
     ],
     
+  },
+  {
+    path: "/sign-up",
+    element: <SignIn />,
+  },
+  {
+    path: "/signhome",
+    element: <SignHome />,
   },
   {
     path: "/",
