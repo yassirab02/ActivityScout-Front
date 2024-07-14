@@ -1,15 +1,15 @@
 import React from 'react';
-import logo from '../assets/logo.png'; // Replace with your actual logo file path
+import logo from '../assets/logo.png'; 
 import { FaInstagram, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#FAF1ED] text-black py-6">
+    <footer className="bg-[#FAF1ED] text-black py-10">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row md:justify-between md:items-center">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
-            <img src={logo} alt="Logo" className="h-12 md:h-16" /> {/* Adjusted logo size */}
-            <span className="text-2xl md:text-3xl font-semibold text-[#5B86BB]">Activity Scout</span>
+            <img src={logo} alt="Logo" className="h-28 md:h-32" /> {/* Adjusted logo size */}
+            <span className="text-2xl md:text-3xl font-semibold text-[#5B86BB]">Activity <br />Scout</span>
           </div>
           <nav className="flex flex-wrap justify-center md:justify-end flex-grow">
             <ul className="flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0">

@@ -68,7 +68,7 @@ const SearchBar = ({ onSearch }) => {
   }
 
   return (
-    <div className="relative w-full max-w-3xl mx-auto mb-10">
+    <div className="relative w-full max-w-3xl mx-auto mb-10 mt-5">
       <h1 className='text-6xl text-blue-700 mb-16 flex justify-center items-center font-[Poppins] font-bold'>{title}</h1>
       <div className='flex justify-center md:gap-24 sm:gap-12 mb-5 text-xl font-[Poppins]'>
         <button

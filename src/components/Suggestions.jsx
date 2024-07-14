@@ -113,8 +113,8 @@ const Suggestions = () => {
                 )}
               </button>
               <div className="p-4">
-                <h3 className="text-xl font-semibold mb-2">{suggestion.title}</h3>
-                <p className="text-gray-600">{suggestion.description}</p>
+                <h3 className="text-xl font-semibold">{suggestion.title}</h3>
+                <p className="text-gray-800 font-semibold">{suggestion.description}</p>
               </div>
             </div>
           ))}
