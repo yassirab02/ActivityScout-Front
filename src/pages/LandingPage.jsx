@@ -1,7 +1,20 @@
 import React from "react";
 import backgroundImage from "../assets/Planet.jpg";
+import { motion } from "framer-motion";
+import splitStringUsingRegex from "../utils/splitStringUsingRegex";
+
+const title1 = " Welcome to ";
+const title2 = "Activity Scout";
+
+const charVariants = {
+  hidden: { opacity: 0 },
+  reveal: { opacity: 1 },
+};
 
 const LandingPage = () => {
+  const headingChars1 = splitStringUsingRegex(title1);
+  const headingChars2 = splitStringUsingRegex(title2);
+
   return (
     <>
       {/* Background Image */}
@@ -58,10 +71,32 @@ const LandingPage = () => {
           <div className="container relative mx-auto flex flex-col gap-16 px-4 py-16 text-center lg:flex-row lg:gap-0 lg:px-8 lg:py-32 lg:text-left xl:max-w-7xl">
             <div className="lg:flex lg:w-1/2 lg:items-center">
               <div>
-                <h1 className="mb-4 text-4xl font-black text-black">
-                  Welcome to 
-                  <span className="text-blue-600"> Activity Scout</span>
-                </h1>
+                <motion.h1
+                  initial="hidden"
+                  whileInView="reveal"
+                  transition={{ staggerChildren: 0.1 }}
+                  className="mb-4 text-4xl font-black text-black"
+                >
+                  {headingChars1.map((char, index) => (
+                    <motion.span
+                      key={index}
+                      transition={{ duration: 0.5 }}
+                      variants={charVariants}
+                    >
+                      {char}
+                    </motion.span>
+                  ))}
+                  {headingChars2.map((char, index) => (
+                    <motion.span
+                      className="text-blue-600"
+                      key={index}
+                      transition={{ duration: 0.5 }}
+                      variants={charVariants}
+                    >
+                      {char}
+                    </motion.span>
+                  ))}
+                </motion.h1>
                 <h2 className="text-xl font-medium leading-relaxed text-gray-700">
                   Your Gateway to City Adventures! Discover the best activities,
                   attractions, and hidden gems in your favorite cities with
@@ -79,7 +114,7 @@ const LandingPage = () => {
                     <span>Get Started</span>
                   </a>
                   <a
-                    href="/learn-more"  
+                    href="/learn-more"
                     className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-400 bg-white px-7 py-3.5 font-semibold leading-6 text-gray-800 hover:border-gray-300 hover:text-gray-900 hover:shadow-sm focus:ring focus:ring-gray-300/25 active:border-gray-200 active:shadow-none"
                   >
                     <span>Learn more</span>

@@ -1,9 +1,19 @@
 import { PhotoIcon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
 
+const countryCityMap = {
+  USA: ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Miami'],
+  Canada: ['Toronto', 'Vancouver', 'Montreal', 'Calgary', 'Ottawa'],
+  Morocco: ['Marrakesh', 'Rabat', 'Tanger', 'Agadir', 'Casablanca'],
+  UK: ['London', 'Manchester', 'Birmingham', 'Liverpool', 'Leeds'],
+  Germany: ['Berlin', 'Munich', 'Frankfurt', 'Hamburg', 'Cologne']
+};
+
 export default function AddActivity() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
+  const [selectedCountry, setSelectedCountry] = useState('');
+  const [cities, setCities] = useState([]);
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -19,6 +29,12 @@ export default function AddActivity() {
     }
   };
 
+  const handleCountryChange = (e) => {
+    const country = e.target.value;
+    setSelectedCountry(country);
+    setCities(countryCityMap[country] || []);
+  };
+
   return (
     <form className="max-w-4xl mx-auto mt-6">
       <div className="border-b border-gray-900/10">
@@ -26,7 +42,7 @@ export default function AddActivity() {
         <div className="grid grid-cols-1 gap-y-8 w-full max-w-md mx-auto">
           <div className="flex flex-col">
             <label htmlFor="activity-name" className="block text-lg font-medium leading-6 text-blue-700">
-              Activity Name
+              Name
             </label>
             <div className="mt-2">
               <input
@@ -42,7 +58,7 @@ export default function AddActivity() {
 
           <div className="flex flex-col">
             <label htmlFor="activity-type" className="block text-lg font-medium leading-6 text-blue-700">
-              Activity Type
+              Type
             </label>
             <div className="mt-2">
               <input
@@ -53,6 +69,50 @@ export default function AddActivity() {
                 autoComplete="off"
                 className="w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
+            </div>
+          </div>
+
+          <div className="flex space-x-4">
+            <div className="flex flex-col w-1/2">
+              <label htmlFor="activity-country" className="block text-lg font-medium leading-6 text-blue-700">
+                Country
+              </label>
+              <div className="mt-2">
+                <select
+                  id="activity-country"
+                  name="activity-country"
+                  className="w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  value={selectedCountry}
+                  onChange={handleCountryChange}
+                >
+                  <option value="" disabled>Select a country</option>
+                  {Object.keys(countryCityMap).map((country) => (
+                    <option key={country} value={country}>
+                      {country}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            <div className="flex flex-col w-1/2">
+              <label htmlFor="activity-city" className="block text-lg font-medium leading-6 text-blue-700">
+                City
+              </label>
+              <div className="mt-2">
+                <select
+                  id="activity-city"
+                  name="activity-city"
+                  className="w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                >
+                  <option value="" disabled>Select a city</option>
+                  {cities.map((city) => (
+                    <option key={city} value={city}>
+                      {city}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
           </div>
 
@@ -122,4 +182,3 @@ export default function AddActivity() {
     </form>
   );
 }
-    

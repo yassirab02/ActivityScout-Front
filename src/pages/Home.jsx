@@ -10,10 +10,9 @@ import ConfirmMsg from "../components/comment/ConfirmMsg";
 import Suggestions from "../components/Suggestions";
 import Activities from "../components/Activities";
 import AddComment from "../components/comment/AddComment";
-import AddActivity from "../components/AddActivity";
 import Carousel from "../components/Carousel";
 import InfiniteScroller from "../components/InfiniteScroller";
-// import Login from "./pages/Login";
+
 
 const Home = () => {
   return (

@@ -19,12 +19,17 @@ import SignUp from "./pages/SignUp";
 
 const router = createBrowserRouter([
   {
+    path: "/",
+    element: <LandingPage/>,
+    errorElement: <ErrorPage/>,
+  },
+  {
     element: <Layout/>,
     errorElement: <ErrorPage/>,
     children: [
       {
         path: "/contact",
-        element: <Activities />,
+        element: <Activities />,  
       },
       {
         path: "/add",
@@ -48,11 +53,6 @@ const router = createBrowserRouter([
   {
     path: "/signhome",
     element: <SignHome />,
-  },
-  {
-    path: "/",
-    element: <LandingPage/>,
-    errorElement: <ErrorPage/>,
   },
   {
     path: "/home",
