@@ -46,9 +46,11 @@ const Navbar = () => {
               </a>
             </li>
           ))}
+          <a href="/sign-in">
           <Button>
-            <a href="/sign-up">Sign Up</a>
+            Sign In
           </Button>
+          </a>
         </ul>
       </div>
 

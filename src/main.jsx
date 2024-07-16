@@ -15,6 +15,7 @@ import AddActivity from "./components/AddActivity";
 import SignIn from "./pages/SignIn";
 import About from "./components/About";
 import SignHome from "./pages/SignHome";
+import SignUp from "./pages/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -37,8 +38,12 @@ const router = createBrowserRouter([
     
   },
   {
-    path: "/sign-up",
+    path: "/sign-in",
     element: <SignIn />,
+  },
+  {
+    path: "/sign-up",
+    element: <SignUp />,
   },
   {
     path: "/signhome",

@@ -1,5 +1,5 @@
 import React from "react";
-import backgroundImage from "../assets/Planet.jpg"; // Replace with your background image path
+import backgroundImage from "../assets/Planet.jpg";
 
 const LandingPage = () => {
   return (

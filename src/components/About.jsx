@@ -4,7 +4,7 @@ export default function About() {
   return (
     <>
       {/* Features Section: Boxes with Icons */}
-      <div className="bg-gradient-to-tr from-indigo-100 via-purple-50 to-teal-100 dark:from-indigo-900 dark:via-purple-900 dark:to-teal-900 dark:text-gray-100">
+      <div className="bg-gradient-to-tr from-indigo-100 via-purple-50 to-teal-100 dark:from-blue-700 dark:via-purple-900 dark:to-teal-900 dark:text-gray-100">
         <div className="container mx-auto px-4 py-16 lg:px-8 lg:py-32 xl:max-w-7xl">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-lg border border-white bg-white p-5 shadow-sm transition hover:border-blue-600 md:p-7 xl:p-10 dark:border-gray-800 dark:bg-gray-800 dark:shadow-none dark:hover:border-blue-400">
