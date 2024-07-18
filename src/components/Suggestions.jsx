@@ -75,7 +75,7 @@ const Suggestions = () => {
         {hovering && (
           <button
             onClick={scrollLeft}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white border border-black rounded-full p-2 z-10 h-10"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white/70 border border-black rounded-full p-2 z-10 h-10"
           >
             <IonIcon icon={arrowBackOutline} className="text-2xl text-black" />
           </button>
@@ -122,7 +122,7 @@ const Suggestions = () => {
         {hovering && (
           <button
             onClick={scrollRight}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white border border-black rounded-full p-2 h-10"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white/70 border border-black rounded-full p-2 h-10"
           >
             <IonIcon icon={arrowForwardOutline} className="text-2xl text-black" />
           </button>
